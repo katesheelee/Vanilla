@@ -1,21 +1,17 @@
-function formatDate(timestamp) {
-	let now = new Date(timestamp);
-	let hours = now.getHours();
-	let minutes = now.getMinutes();
-	let day = now.getDay();
+let now = new Date();
 
-	let days = [
-		"#",
-		"Monday",
-		"Tuesday",
-		"Wednesday",
-		"Thursday",
-		"Friday",
-		"Saturday",
-		"Sunday",
-	];
-	return `${days[day]} ${hours}:${minutes}`;
-}
+let days = [
+	"#",
+	"Monday",
+	"Tuesday",
+	"Wednesday",
+	"Thursday",
+	"Friday",
+	"Saturday",
+	"Sunday",
+];
+let date = document.querySelector("#datetime");
+date.innerHTML = `${days[now.getDay()]}  ${now.getHours()}:${now.getMinutes()}`;
 
 function displayTemperature(responce) {
 	let temperatureElement = document.querySelector("#temp");
