@@ -30,12 +30,12 @@ function displayTemperature(responce) {
 		"src",
 		`https://openweathermap.org/img/wn/${icon}@2x.png`
 	);
+	ctemp = responce.data.main.temp;
 }
 
 function search(city) {
 	let apiKey = "4be4c5e07e7604cd26d0eb3ec1d11faf";
 	let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
 	axios.get(url).then(displayTemperature);
 }
 
@@ -44,8 +44,27 @@ function handleSubmit(event) {
 	let cityInputElement = document.querySelector("#cityInput");
 	search(cityInputElement.value);
 }
+let form = document.querySelector("#searchForm");
+form.addEventListener("submit", handleSubmit);
 
 search("Paris");
 
-let form = document.querySelector("#searchForm");
-form.addEventListener("submit", handleSubmit);
+///convert
+
+function convertionF(event) {
+	event.preventDefault();
+	let fahrenheitTemperature = Math.round((ctemp * 9) / 5 + 32);
+	let temperatureElement = document.querySelector("#temp");
+	temperatureElement.innerHTML = fahrenheitTemperature;
+}
+function convertionC(event) {
+	event.preventDefault();
+	let temperatureElement = document.querySelector("#temp");
+	temperatureElement.innerHTML =Math.round(ctemp);
+}
+
+let ftemp = document.querySelector("#ftemp");
+ftemp.addEventListener("click", convertionF);
+
+let ctemp = document.querySelector("#ctemp");
+ctemp.addEventListener("click", convertionC);
