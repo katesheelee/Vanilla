@@ -60,7 +60,7 @@ function convertionF(event) {
 function convertionC(event) {
 	event.preventDefault();
 	let temperatureElement = document.querySelector("#temp");
-	temperatureElement.innerHTML =Math.round(ctemp);
+	temperatureElement.innerHTML = Math.round(ctemp);
 }
 
 let ftemp = document.querySelector("#ftemp");
@@ -68,3 +68,39 @@ ftemp.addEventListener("click", convertionF);
 
 let ctemp = document.querySelector("#ctemp");
 ctemp.addEventListener("click", convertionC);
+
+///forecast
+
+function displayForecast() {
+	let forecastElement = document.querySelector("#forecast");
+	let days = ["Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
+	let forecastHTML = `<div class="row">`;
+
+	days.forEach(function (day) {
+		forecastHTML =
+			forecastHTML +
+			`<div class="col-2">
+
+							<div class="weatherForecastdate">
+								${day}
+							</div>
+		<img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png "
+								class="imageForecast" alt="partly_cloudy" id="icon" width="36">
+							<div class="weatherForecastTemp">
+								<span class="weatherForecastTemp-max">
+									18°
+								</span>
+								<span class="weatherForecastTemp-min">
+
+									12°
+								</span>
+								</div>
+								</div>
+								
+							`;
+	});
+	forecastHTML = forecastHTML + `</div>`;
+
+	forecastElement.innerHTML = forecastHTML;
+}
+displayForecast();
