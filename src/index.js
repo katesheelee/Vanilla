@@ -25,13 +25,27 @@ function displayTemperature(responce) {
 	let windElement = document.querySelector("#wind");
 	windElement.innerHTML = Math.round(responce.data.wind.speed);
 	let iconElement = document.querySelector("#icon");
-    let icon =responce.data.weather[0].icon
-    iconElement.setAttribute("src",`https://openweathermap.org/img/wn/${icon}@2x.png`);
-	
+	let icon = responce.data.weather[0].icon;
+	iconElement.setAttribute(
+		"src",
+		`https://openweathermap.org/img/wn/${icon}@2x.png`
+	);
 }
 
-let apiKey = "4be4c5e07e7604cd26d0eb3ec1d11faf";
-let city = "Paris";
-let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+function search(city) {
+	let apiKey = "4be4c5e07e7604cd26d0eb3ec1d11faf";
+	let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-axios.get(url).then(displayTemperature);
+	axios.get(url).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+	event.preventDefault();
+	let cityInputElement = document.querySelector("#cityInput");
+	search(cityInputElement.value);
+}
+
+search("Paris");
+
+let form = document.querySelector("#searchForm");
+form.addEventListener("submit", handleSubmit);
