@@ -65,3 +65,23 @@ strong {
 	bottom: 34px;
 	text-decoration: none;
 }
+
+.weather-forecast {
+	margin-top: 20px;
+	text-align: center;
+	color: black;
+}
+
+.weatherForecastdate {
+	font-size: 16px;
+	opacity: 0, 6;
+	color: grey;
+}
+.weatherForecastTemp-max,
+.weatherForecastTemp-min {
+	font-size: 13px;
+}
+
+.weatherForecastTemp-min {
+	color: grey;
+}
