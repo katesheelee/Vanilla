@@ -15,123 +15,114 @@
 </head>
 
 <body>
-	<div class="conteiner">
-		<div class="weatherApp">
-			<div class="overview">
-				<form id="searchForm">
-					<div class="row">
-						<div class="col-9">
-							<input type="search" placeholder="Type a city.." id="cityInput" autocomplete="off"
-								class="form-control">
-						</div>
-						<div class="col-3">
-							<input type="submit" value="Search" class="btn btn-primary w-100 ">
-						</div>
-					</div>
-				</form>
-				<h1 id="city">
-					New York
-				</h1>
-				<ul>
-					<li> Last updated at
-						<span id="datetime">
-						</span>
-					</li>
-					<li id="description">
-						Clear
-					</li>
-				</ul>
-			</div>
-			<button id="button">Current Position </button>
+	<div class="search">
+		<form id="searchForm">
 			<div class="row">
-				<div class="col-6">
-					<img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png " class="image"
-						alt="partly_cloudy" id="icon">
-					<strong id="temp">
-						12</strong>
-					<small><a href="#" id="ctemp" class="ctemp">C°|</a>
-					</small>
-
-					<small>
-						<a href="#" class="ftemp" id="ftemp">
-							°F</a>
-					</small>
+				<div class="col-9">
+					<input type="search" placeholder="Type a city.." id="cityInput" autocomplete="off"
+						class="form-control">
 				</div>
-				<div class="col-6">
-					<ul>
-						<li>
-							Humidity: <span id="humidity"></span>%
-						</li>
-						<li>
-							Wind: <span id="wind"> </span> km/h
-						</li>
-
-					</ul>
-
+				<div class="col-3">
+					<input type="submit" value="Search" class="btn btn-outline-primary w-100 ">
+					<button id="button">📍</button>
 				</div>
+			</div>
+	</div>
+	</form>
+	<div class="weatherApp">
+		<h1 id="city">
+			New York
+		</h1>
+		<ul>
+			<li> Last updated at
+				<span id="datetime">
+				</span>
+			</li>
+			<li id="description">
+				Clear
+			</li>
+		</ul>
 
 
+		<div class="row">
+			<div class="col-6">
+				<img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png " class="image"
+					alt="partly_cloudy" id="icon">
+				<strong id="temp">
+					12</strong>
+				<small><a href="#" id="ctemp" class="ctemp">C°|</a>
+				</small>
 
+				<small>
+					<a href="#" class="ftemp" id="ftemp">
+						°F</a>
+				</small>
+			</div>
+			<div class="col-6">
+				<ul>
+					<li>
+						Humidity: <span id="humidity"></span>%
+					</li>
+					<li>
+						Wind: <span id="wind"> </span> km/h
+					</li>
 
-
-				<div class="weather-forecast" id="forecast">
-					<div class="row">
-						<div class="col-2">
-							<div class="weatherForecastdate">
-								Mon
-							</div>
-							<img src="https://openweathermap.org/img/wn/10d@2x.png" class="imageForecast"
-								alt="partly_cloudy" id="icon" width="36">
-							<div class="weatherForecastTemp">
-								<span class="weatherForecastTemp-max">
-									18°
-								</span>
-								<span class="weatherForecastTemp-min">
-
-									12°
-								</span>
-							</div>
-						</div>
-
-
-
-
-
-
-
-					</div>
-
-				</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+				</ul>
 
 			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<div class="weather-forecast" id="forecast">
+		<div class="row">
+			<div class="col-2">
+
+				<div class="weatherForecastdate">
+					Mon
+				</div>
+				<img src="https://openweathermap.org/img/wn/10d@2x.png" class="imageForecast" alt="partly_cloudy"
+					id="icon" width="66">
+				<div class="weatherForecastTemp">
+					<span class="weatherForecastTemp-max">
+						18°
+					</span>
+					<span class="weatherForecastTemp-min">
+
+						12°
+					</span>
+
+				</div>
+			</div>
+
+
+
+
+
+
 
 		</div>
 
-		<div class="weatherAppWrapper">
+	</div>
 
-			<small>
-				<a href="https://github.com/katesheelee/Vanilla" target="_blank">Open-source code </a> ,by Kate
-			</small>
-		</div>
 
-		<script src="src/index.js">
+	</div>
 
-		</script>
+	</div>
+
+	<div class="weatherAppWrapper">
+
+		<small>
+			<a href="https://github.com/katesheelee/Vanilla" target="_blank" class="source">GitHub </a>
+		</small>
+	</div>
+
+	<script src="src/index.js">
+
+	</script>
 </body>
 
 </html>

@@ -3,11 +3,14 @@ body {
 }
 .weatherApp {
 	margin: 30px auto;
-	max-width: 600px;
+	max-width: 750px;
 	padding: 20px;
-	border: 1px solid #dadde1;
-	border-radius: 5px;
 	margin-bottom: 2px;
+	margin: 0 auto;
+	margin-top: 50px;
+	border: 0px;
+	border-radius: 10%;
+	box-shadow: 5px 5px 5px 2px #cfcfcf;
 }
 h1 {
 	color: rgb(135, 135, 135);
@@ -84,4 +87,49 @@ strong {
 
 .weatherForecastTemp-min {
 	color: grey;
+}
+
+button {
+	display: block;
+	margin: auto;
+	left: 160px;
+}
+
+.search {
+	display: block;
+	margin: 0 auto;
+	max-width: 650px;
+	margin-top: 90px;
+	box-shadow: 5px 5px 5px 2px #f2f2f2;
+}
+
+.weather-forecast {
+	max-width: 850px;
+	display: block;
+	margin: auto;
+	margin-top: 50px;
+	border: 0px;
+	border-radius: 10%;
+	box-shadow: 5px 5px 5px 2px #cfcfcf;
+}
+
+button {
+	border-radius: 10px;
+	padding: 8px;
+	background: #ffffff;
+	color: aliceblue;
+	border: 0;
+	margin-left: 150px;
+	margin-top: -40px;
+	box-shadow: 5px 5px 5px 2px #e1e1e1;
+}
+
+.weatherAppWrapper {
+	display: block;
+	margin: auto;
+	margin-top: 150px;
+}
+.source {
+	text-decoration: none;
+	color: rgb(126, 126, 126);
 }
