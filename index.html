@@ -27,65 +27,61 @@ class="form-control">
   
 <div class="col-3">
 <input type="submit" value="Search" class="btn btn-outline-primary w-100 ">
-<button id="button">📍</button>
 </div>
 </div>
 </div>
-  </form>
+ </form>
 	
-  <div class="weatherApp">
-    <h1 id="city">New York</h1>
-		<ul>
-    <li> Last updated at<span id="datetime"></span>
-	  </li>
-		<li id="description">	Clear</li>
-		</ul>
+<div class="weatherApp">
+<h1 id="city">New York</h1>
+<ul>
+<li> Last updated at<span id="datetime"></span>
+</li>
+<li id="description">Clear</li>
+</ul>
 
+<div class="row">
+<div class="col-6">
+<img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png " class="image"alt="partly_cloudy" id="icon">
+<strong id="temp">12</strong><small><a href="#" id="ctemp" class="ctemp">C°|</a>
+</small>
 
-		<div class="row">
-		<div class="col-6">
-		<img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png " class="image"alt="partly_cloudy" id="icon">
-		<strong id="temp">12</strong><small><a href="#" id="ctemp" class="ctemp">C°|</a>
-		</small>
-
-	 <small>
-		<a href="#" class="ftemp" id="ftemp">°F</a>
-   </small>
+<small>
+<a href="#" class="ftemp" id="ftemp">°F</a>
+</small>
       
-	</div>
-	<div class="col-6">
-	<ul>
-	<li>
-	Humidity: <span id="humidity"></span>%
-	</li>
-	<li>
-	Wind: <span id="wind"> </span> km/h
-	</li>
-  </ul>
-  </div>
-  </div>
-	</div>
+</div>
+<div class="col-6">
+<ul>
+<li>Humidity: <span id="humidity"></span>%
+</li>
+<li>
+Wind: <span id="wind"> </span> km/h
+</li>
+</ul>
+</div>
+</div>
+</div>
 
+<div class="weather-forecast" id="forecast">
+<div class="row">
+<div class="col-2">
 
-	<div class="weather-forecast" id="forecast">
-  <div class="row">
-	<div class="col-2">
+<div class="weatherForecastdate">Mon</div>
+<img src="https://openweathermap.org/img/wn/10d@2x.png" class="imageForecast" alt="partly_cloudy"id="icon" width="46">
+<div class="weatherForecastTemp">
+<span class="weatherForecastTemp-max">18°</span>
+<span class="weatherForecastTemp-min">12°</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-	<div class="weatherForecastdate">	Mon</div>
-	<img src="https://openweathermap.org/img/wn/10d@2x.png" class="imageForecast" alt="partly_cloudy"id="icon" width="46">
-	<div class="weatherForecastTemp">
- <span class="weatherForecastTemp-max">18°</span>
-	<span class="weatherForecastTemp-min">12°</span>
-		</div>
-		</div>
-		</div>
-	  </div>
-	  </div>
-	  </div>
-
-	<div class="weatherAppWrapper">
+<div class="weatherAppWrapper">
 <small><a href="https://github.com/katesheelee/Vanilla" target="_blank" class="source">GitHub </a></small>
-	</div><script src="src/index.js">
+</div><script src="src/index.js">
 </script>
 </body>
 
